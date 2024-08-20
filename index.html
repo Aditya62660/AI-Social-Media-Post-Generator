@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Generator</title>
+</head>
+<body>
+    <h1>Generate Social Media Posts</h1>
+    <form method="POST" action="/generate">
+        <label for="prompt">Enter a prompt:</label>
+        <textarea id="prompt" name="prompt" rows="4" cols="50">{{ prompt }}</textarea>
+        <br><br>
+        <input type="submit" value="Generate Post">
+    </form>
+
+    {% if generated_text %}
+        <h2>Generated Post:</h2>
+        <p>{{ generated_text }}</p>
+    {% endif %}
+</body>
+</html>
